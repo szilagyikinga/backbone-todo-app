@@ -16,7 +16,8 @@ const TodoView = View.extend({
   events: {
     'dblclick label' : 'edit',
     'keypress .edit' : 'updateOnEnter',
-    'blur .edit' : 'close'
+    'blur .edit' : 'close',
+    'click .toggle': 'toggleCompleted'
   },
   edit: function(){
     this.$el.addClass('editing');
@@ -33,6 +34,9 @@ const TodoView = View.extend({
     if(e.which == 13){
       this.close();
     }
+  },
+  toggleCompleted: function(){
+    this.model.toggle();
   }
 });
 
