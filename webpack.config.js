@@ -57,7 +57,12 @@ module.exports = {
       {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/octet-stream'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      {test: /\.md$/, loaders: ['html', 'markdown']}
+      {test: /\.md$/, loaders: ['html', 'markdown']},
+      {
+        test: /\.html$/,
+        loader: "underscore-template-loader",
+        query: { engine: 'underscore'},
+      }
     ]
   },
 
