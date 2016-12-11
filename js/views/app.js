@@ -3,6 +3,7 @@ import _ from 'underscore';
 import $ from 'jquery';
 import TodoList from 'models/Todos';
 import TodoView from 'views/todo';
+import filterService from '../services/filter';
 
 const AppView = View.extend({
     el: '#todoapp',
@@ -28,7 +29,7 @@ const AppView = View.extend({
     },
     addAll: function(){
       this.$('#todo-list').html('');
-      switch(window.filter){
+      switch(filterService.filter){
         case 'pending':
           _.each(TodoList.remaining(), this.addOne);
           break;
