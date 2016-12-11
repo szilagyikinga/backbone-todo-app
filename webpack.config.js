@@ -8,7 +8,7 @@ module.exports = {
     app: [
       'webpack-dev-server/client?http://localhost:8081',
       'webpack/hot/dev-server',
-      './js/main.js'
+      './src/main.js'
     ]
   },
 
@@ -28,7 +28,7 @@ module.exports = {
     root: __dirname,
 
     // Directory names to be searched for modules
-    modulesDirectories: ['js', 'views', 'node_modules'],
+    modulesDirectories: ['src', 'views', 'node_modules'],
 
     // Replace modules with other modules or paths for compatibility or convenience
     alias: {

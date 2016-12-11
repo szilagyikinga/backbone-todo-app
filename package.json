@@ -12,6 +12,8 @@
     "autoprefixer-loader": "^1.2.0",
     "babel-core": "^4.7.13",
     "babel-loader": "^4.2.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
     "css-loader": "^0.9.1",
     "eslint": "^3.10.2",
     "eslint-loader": "^0.7.0",
@@ -20,16 +22,20 @@
     "html-loader": "^0.2.3",
     "json-loader": "^0.5.1",
     "markdown-loader": "^0.1.2",
+    "mocha": "^3.2.0",
     "proxy-middleware": "^0.11.0",
     "sass-loader": "^0.5.0",
     "style-loader": "^0.8.3",
     "text-loader": "0.0.1",
     "url-loader": "^0.5.5",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
     "webpack": "^1.7.3",
     "webpack-dev-server": "^1.7.0"
   },
   "scripts": {
     "start": "node server.js",
-    "start:server": "json-server --watch db.json"
+    "start:server": "json-server --watch db.json",
+    "test": "mocha src/tests --recursive --compilers js:babel-core/register"
   }
 }
