@@ -1,9 +1,9 @@
 import { View } from 'backbone';
 import _ from 'underscore';
 import $ from 'jquery';
-import TodoList from 'models/Todos';
+import TodoList from 'collections/Todos';
 import TodoView from 'views/todo';
-import filterService from '../services/filter';
+import filterService from 'services/filter';
 
 const AppView = View.extend({
     el: '#todoapp',

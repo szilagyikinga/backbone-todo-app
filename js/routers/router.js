@@ -1,6 +1,6 @@
 import Router from 'backbone';
-import TodoList from 'models/Todos';
-import filterService from '../services/filter';
+import TodoList from 'collections/Todos';
+import filterService from 'services/filter';
 
 const TodoRouter = Backbone.Router.extend({
   routes: {
