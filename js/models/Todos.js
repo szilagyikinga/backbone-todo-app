@@ -1,10 +1,9 @@
 import { Collection } from 'backbone';
-import Store from 'backbone.localstorage';
 import Todo from 'models/todo';
 
 const TodoList = Collection.extend({
   model: Todo,
-  localStorage: new Store("todos"),
+  url: 'http://localhost:3000/todos',
   completed: function() {
     return this.filter(function( todo ) {
       return todo.get('completed');
